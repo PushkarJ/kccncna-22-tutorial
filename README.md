@@ -6,7 +6,7 @@ Scripts, Slides and Other Details for KubeCon NA 2022 tutorial: https://sched.co
 
 > Please **DO NOT** run the scripts in this tutorial in a production environment. 
 > Use a local environment that is not shared with other users
-> If you are uncomfortable or unable running any of the scripts, it's okay! 
+> If you are uncomfortable or unable to run any of the scripts, it's okay! 
 > Follow along with the rest of the class and try it later in your own free time!
 
 ### Docker
