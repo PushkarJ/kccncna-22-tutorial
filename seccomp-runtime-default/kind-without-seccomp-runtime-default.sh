@@ -1,6 +1,11 @@
 #!/bin/sh
+
+set -o errexit
+set -o nounset
+set -o pipefail
+
 mkdir -p /tmp/seccomp
-kind create cluster --name seccomp-without-runtime-default --image kindest/node:v1.24.0
+kind create cluster --name seccomp-without-runtime-default --image kindest/node:v1.25.2
 kubectl cluster-info --context kind-seccomp-without-runtime-default
 # Wait for 15 seconds (arbitrary) ServiceAccount Admission Controller to be available
 sleep 15

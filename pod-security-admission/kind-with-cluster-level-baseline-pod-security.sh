@@ -1,4 +1,8 @@
 #!/bin/sh
+set -o errexit
+set -o nounset
+set -o pipefail
+
 mkdir -p /tmp/pss
 cat <<EOF > /tmp/pss/cluster-level-pss.yaml
 apiVersion: apiserver.config.k8s.io/v1
@@ -53,7 +57,7 @@ nodes:
 EOF
 kind create cluster --name psa-with-cluster-pss --image kindest/node:v1.23.0 --config /tmp/pss/cluster-config.yaml
 kubectl cluster-info --context kind-psa-with-cluster-pss
-# Wait for 15 seconds (arbitrary) ServiceAccount Admission Controller to be available
+# Wait for 15 seconds (arbitrary) to allow ServiceAccount Admission Controller to be available
 sleep 15
 cat <<EOF > /tmp/pss/nginx-pod.yaml
 apiVersion: v1

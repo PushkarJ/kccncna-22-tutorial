@@ -9,6 +9,10 @@ Scripts, Slides and Other Details for KubeCon NA 2022 tutorial: https://sched.co
 > If you are uncomfortable or unable to run any of the scripts, it's okay! 
 > Follow along with the rest of the class and try it later in your own free time!
 
+### Git
+
+Clone this repository: <todo>
+
 ### Docker
 
 Docker Desktop is preferred but not needed. 
