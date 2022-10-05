@@ -47,6 +47,6 @@ spec:
     args: [ "sleep infinity" ]
 EOF
 kubectl apply -f /tmp/seccomp/forever-asleep.yaml
-sleep 5
+sleep 30
 kubectl exec --stdin --tty forever-asleep -- /bin/bash
 

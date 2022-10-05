@@ -55,7 +55,7 @@ nodes:
     # default None
     propagation: None
 EOF
-kind create cluster --name psa-with-cluster-pss --image kindest/node:v1.23.0 --config /tmp/pss/cluster-config.yaml
+kind create cluster --name psa-with-cluster-pss --image kindest/node:v1.25.2 --config /tmp/pss/cluster-config.yaml
 kubectl cluster-info --context kind-psa-with-cluster-pss
 # Wait for 15 seconds (arbitrary) to allow ServiceAccount Admission Controller to be available
 sleep 15
