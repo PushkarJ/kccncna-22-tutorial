@@ -26,9 +26,9 @@ nodes:
         kind: JoinConfiguration
         nodeRegistration:
           kubeletExtraArgs:
-            feature-gates: SeccompDefault=true
             seccomp-default: "true"
 EOF
+
 kind create cluster --name seccomp-with-runtime-default --image kindest/node:v1.25.2 --config /tmp/seccomp/cluster-config.yaml
 kubectl cluster-info --context kind-seccomp-with-runtime-default
 # Wait for 15 seconds (arbitrary) ServiceAccount Admission Controller to be available
