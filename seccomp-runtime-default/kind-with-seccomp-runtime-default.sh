@@ -12,7 +12,6 @@ featureGates:
   SeccompDefault: true
 nodes:
   - role: control-plane
-    image: kindest/node:v1.25.0@sha256:6e0f9005eba4010e364aa1bb25c8d7c64f050f744258eb68c4eb40c284c3c0dd
     kubeadmConfigPatches:
       - |
         kind: JoinConfiguration
@@ -20,7 +19,6 @@ nodes:
           kubeletExtraArgs:
             seccomp-default: "true"
   - role: worker
-    image: kindest/node:v1.25.0@sha256:6e0f9005eba4010e364aa1bb25c8d7c64f050f744258eb68c4eb40c284c3c0dd
     kubeadmConfigPatches:
       - |
         kind: JoinConfiguration

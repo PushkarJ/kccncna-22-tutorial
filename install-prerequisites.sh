@@ -4,11 +4,10 @@ set -o errexit
 set -o nounset
 set -o pipefail
 
-echo "Installing kind..."
-
-echo "Installing kubectl..."
-
 echo "Installing cosign..."
+
+export GOPATH=$HOME/go
+PATH=$PATH:~/$GOPATH/bin
 
 go install github.com/sigstore/cosign/cmd/cosign@latest
 

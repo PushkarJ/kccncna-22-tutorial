@@ -72,3 +72,24 @@ spec:
         - containerPort: 80
 EOF
 kubectl apply -f /tmp/pss/nginx-pod.yaml
+
+cat <<EOF > /tmp/pss/nginx-pod-restricted-pss.yaml
+apiVersion: v1
+kind: Pod
+metadata:
+  name: nginx-r-pss
+spec:
+  containers:
+    - image: nginx
+      name: nginx-r-pss
+      securityContext:
+        runAsNonRoot: true
+        seccompProfile:
+          type: RuntimeDefault
+        allowPrivilegeEscalation: false
+        capabilities:
+          drop: ["ALL"]
+      ports:
+        - containerPort: 80
+EOF
+kubectl apply -f /tmp/pss/nginx-pod-restricted-pss.yaml
