@@ -11,7 +11,11 @@ Scripts, Slides and Other Details for KubeCon NA 2022 tutorial: https://sched.co
 
 ### Git
 
-Clone this repository: <todo>
+Clone this repository: 
+
+```
+git clone https://github.com/PushkarJ/kccncna-22-tutorial.git
+```
 
 ### Docker
 
