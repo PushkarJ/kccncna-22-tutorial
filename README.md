@@ -38,7 +38,7 @@ https://kubernetes.io/docs/tasks/tools/#kubectl
 ### Cosign
 
 1. Install Go: https://go.dev/dl/
-2. Install Cosign: go install github.com/sigstore/cosign/cmd/cosign@latest
+2. Install Cosign: `go install github.com/sigstore/cosign/cmd/cosign@latest`
 
 Ref: https://docs.sigstore.dev/cosign/installation/
 
