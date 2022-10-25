@@ -7,7 +7,7 @@ set -o pipefail
 echo "Installing cosign..."
 
 export GOPATH=$HOME/go
-PATH=$PATH:~/$GOPATH/bin
+PATH=$PATH:$GOPATH/bin
 
 go install github.com/sigstore/cosign/cmd/cosign@latest
 

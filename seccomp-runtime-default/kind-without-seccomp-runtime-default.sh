@@ -26,6 +26,24 @@ spec:
     args: [ "sleep infinity" ]
 EOF
 kubectl apply -f /tmp/seccomp/forever-asleep.yaml
+
+cat <<EOF > /tmp/seccomp/forever-asleep-2.yaml
+apiVersion: v1
+kind: Pod
+metadata:
+  name: forever-asleep-2
+spec:
+  containers:
+  - name: forever-asleep-2
+    securityContext:
+      capabilities:
+        add: ["SYS_TIME"]
+    image: ubuntu:latest
+    # Sleep forever
+    command: [ "/bin/bash", "-c", "--" ]
+    args: [ "sleep infinity" ]
+EOF
+kubectl apply -f /tmp/seccomp/forever-asleep-2.yaml
 sleep 30
 kubectl exec --stdin --tty forever-asleep -- /bin/bash
 
