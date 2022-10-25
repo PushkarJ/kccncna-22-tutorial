@@ -17,7 +17,7 @@ git clone https://github.com/PushkarJ/kccncna-22-tutorial.git
 
 ### Docker
 
-Docker Desktop is preferred but not needed. 
+"Docker Desktop" is preferred over static binaries
 
 https://docs.docker.com/engine/install/
 
