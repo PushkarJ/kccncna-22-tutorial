@@ -4,12 +4,12 @@ Scripts, Slides and Other Details for KubeCon NA 2022 tutorial: https://sched.co
 
 ## Pre-requisites
 
-> Please **DO NOT** run the scripts in this tutorial in a production environment. 
+> Please **DO NOT** run the scripts in this tutorial in a production environment.
 > Use a local environment that is not shared with other users
 
 ### Git
 
-Clone this repository: 
+Clone this repository:
 
 ```
 git clone https://github.com/PushkarJ/kccncna-22-tutorial.git
@@ -21,9 +21,13 @@ git clone https://github.com/PushkarJ/kccncna-22-tutorial.git
 
 https://docs.docker.com/engine/install/
 
+### Using homebrew or Linux brew
+
+If you have homebrew installed, you can run `brew bundle` to install pre-requisites.
+
 ### KinD
 
-KinD (Kubernetes in Docker) is a local Kubernetes Installer that uses Docker 
+KinD (Kubernetes in Docker) is a local Kubernetes Installer that uses Docker
 
 https://kind.sigs.k8s.io/docs/user/quick-start/#installing-with-a-package-manager
 
@@ -43,5 +47,3 @@ Ref: https://docs.sigstore.dev/cosign/installation/
 ### curl
 
 https://command-not-found.com/curl
-
-
